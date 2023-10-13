@@ -140,8 +140,4 @@ MAKE_HTAP(e_de_eur,&euro_sign, &kp)
 
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
-ZMK_BEHAVIOR(swapper, tri_state,
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT2>;
-)
 
