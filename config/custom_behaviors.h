@@ -105,7 +105,27 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 
 // combo stuff
 MAKE_MORPH_SHIFT(bs_del, &kp BSPC, &kp DEL) 
-
+MAKE_MORPH_SHIFT(space_tab, &kp SPACE, &kp TAB)
+MAKE_MORPH_SHIFT(enter_tab, &kp ENTER, &kp TAB)
+MAKE_MORPH_SHIFT(flsh_pipe, &kp FSLH, &kp PIPE)
+MAKE_MORPH_SHIFT(esc_cancel, &kp ESC, &kp K_CANCEL)
+MAKE_MORPH_SHIFT(at_hash, &kp AT, &kp HASH)
+MAKE_MORPH_SHIFT(comma_semi, &kp COMMA, &kp SEMI)
+MAKE_MORPH_SHIFT(dot_colon, &kp DOT, &kp COLON)
+MAKE_MORPH_SHIFT(qmark_excl, &kp QMARK, &kp EXCL)
+MAKE_MORPH_SHIFT(lt_gt, &kp LT, &kp GT)
+MAKE_MORPH_SHIFT(dqt_sqt, &kp DQT, &kp SQT)
+MAKE_MORPH_SHIFT(flsh_bslh, &kp FSLH, &kp BSLH)
+MAKE_MORPH_SHIFT(dllr_amps, &kp DLLR, &kp AMPS)
+MAKE_MORPH_SHIFT(pipe_tilt, &kp PIPE, &kp TILDE)
+MAKE_MORPH_SHIFT(grave_caret ,&kp GRAVE, &kp CARET)
+MAKE_MORPH_SHIFT(lbkt_rbkt , &kp LBKT, &kp RBKT)
+MAKE_MORPH_SHIFT(lpar_rpar, &kp LPAR, &kp RPAR)
+MAKE_MORPH_SHIFT(lbrc_rbrc, &kp LBRC, &kp RBRC)
+MAKE_MORPH_SHIFT(equal_prcnt ,&kp EQUAL, &kp PRCNT)
+MAKE_MORPH_SHIFT(minus_under, &kp MINUS, &kp UNDER)
+MAKE_MORPH_SHIFT(plus_astrk, &kp PLUS, &kp ASTRK)
+MAKE_MORPH_SHIFT(semi_colon, &kp SEMI, &kp COLON)
 
 
 
