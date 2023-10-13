@@ -100,4 +100,16 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 
 
 
+// mods for combos
+
+
+#define MAKE_SFTMORPH(NAME, TAP, MODTAP) \
+ZMK_BEHAVIOR(NAME, mod_morph, \
+    bindings = <TAP>, <MODTAP>; \
+    mods = <(MOD_LSFT|MOD_RSFT)>; \
+)
+MAKE_SFTMORPH(bs_del, &kp BSPC, &kp DEL) 
+
+
 #define CANCEL      &kp K_CANCEL
+
