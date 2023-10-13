@@ -90,7 +90,8 @@ MAKE_HRM_SHIFT(hmrs, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shif
 
 
 // urbo smart shift
-MAKE_MORPH_SHIFT(smart_shft, &sk LSHFT, &caps_word) 
+MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word) 
+MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word) 
     &caps_word {  // mods deactivate caps-word, requires PR #1451
         /delete-property/ ignore-modifiers;
     };
@@ -133,7 +134,7 @@ MAKE_MORPH_SHIFT(plus_astrk, &kp PLUS, &kp ASTRK)
 MAKE_MORPH_SHIFT(semi_colon, &kp SEMI, &kp COLON)
 
 ZMK_BEHAVIOR(swapper, tri_state,
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>, <&navi_word>;
     ignored-key-positions = <LT2>;
 )
 

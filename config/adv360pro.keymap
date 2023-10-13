@@ -28,12 +28,24 @@
 #define DEF 0
 #define NUM 1
 #define FN 2
-#define MOD 3
+#define NAVI 3
+#define MOD 4
 
 #include "custom_behaviors.h"
 #include "combos.dtsi"
 
 / {
+
+behaviors {
+		        navi_word: behavior_navi_word {
+			compatible = "zmk,behavior-caps-word";
+			label = "NAVI_WORD";
+			#binding-cells = <0>;
+                        layers = <NAVI>;  
+			continue-list = <LSHFT RSHFT DEL BSPC TAB LEFT DOWN UP RIGHT>;
+		};
+	};
+
     /* remove unused keys from layout and move thumb cluster to bottom */
     chosen {
         zmk,matrix_transform = &urobs_transform;
@@ -48,10 +60,10 @@
                 &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     &swapper         ___   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
                 &kp TAB   &a_de_ae 0 A    &s_de_esz 0 S     &kp D     &kp F     &kp G     ___    &none     &kp H     &kp J     &kp K     &kp L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
-                &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
+                &mo FN    &kp GRAVE &mo NAVI  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
                                                         &bs_del &esc_cancel   &hml END HOME        &hmr PG_DN PG_UP &enter_tab &space_tab
-                                                                            &kp LSHFT       &kp RSHFT
+                                                                            &smart_shft_l       &smart_shft_r
             >;
         };
 
@@ -81,6 +93,19 @@
                                                                             ___            ___
             >;
         };
+
+        navi_layer {
+                    bindings = <
+                        &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    ___            ___       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+                        ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
+                        ___       ___       ___       ___       ___       ___       ___            ___       &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT       ___       ___
+                        ___       ___       ___       ___       ___       ___                                ___       ___       ___       ___       ___       ___
+                        ___       ___       ___       ___    ___                                             ___    ___    ___       ___       ___
+                                                                          ___    ___            ___       ___
+                                                                ___    ___    ___         ___    ___    ___
+                                                                                    ___         ___
+                    >;
+                };
 
         mod {
             bindings = <
