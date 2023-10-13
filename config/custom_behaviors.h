@@ -138,6 +138,5 @@ MAKE_HTAP(o_de_oe,&de_oe, &kp)
 MAKE_HTAP(s_de_esz,&de_eszett, &kp)
 MAKE_HTAP(e_de_eur,&euro_sign, &kp)
 
-ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 
