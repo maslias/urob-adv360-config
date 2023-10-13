@@ -34,6 +34,8 @@
 #define THUMBS LH1 LH0 RH0 RH1
 
 
+#define CANCEL &kp K_CANCEL
+
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
   ZMK_BEHAVIOR(NAME, hold_tap, \
       flavor = "balanced"; \
@@ -139,4 +141,5 @@ MAKE_HTAP(s_de_esz,&de_eszett, &kp)
 MAKE_HTAP(e_de_eur,&euro_sign, &kp)
 
 
+ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
