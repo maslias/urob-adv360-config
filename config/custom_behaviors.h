@@ -56,11 +56,12 @@
       hold-trigger-on-release; \
       )
 
+#define MAKE_MORPH_SHIFT(NAME, TAP, MODTAP) \
+ZMK_BEHAVIOR(NAME, mod_morph, \
+    bindings = <TAP>, <MODTAP>; \
+    mods = <(MOD_LSFT|MOD_RSFT)>; \
+)
 
-MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM_SHIFT(hmls, &kp, &kp, KEYS_R THUMBS) // left-hand homerow mod for shift
-MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
-MAKE_HRM_SHIFT(hmrs, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shift
 
 
 #define MT_CORE \
@@ -72,43 +73,45 @@ MAKE_HRM_SHIFT(hmrs, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shif
 &mt { MT_CORE };
 
 
-// tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-ZMK_BEHAVIOR(smart_shft, mod_morph,
-    bindings = <&sk LSHFT>, <&caps_word>;
-    mods = <(MOD_LSFT)>;
-)
-&caps_word {  // mods deactivate caps-word, requires PR #1451
-    /delete-property/ ignore-modifiers;
-};
+MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
+MAKE_HRM_SHIFT(hmls, &kp, &kp, KEYS_R THUMBS) // left-hand homerow mod for shift
+MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
+MAKE_HRM_SHIFT(hmrs, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shift
 
-// tap: num-word | double-tap: sticky num-layer | hold: num-layer
+
+// urbo smart shift
+MAKE_MORPH_SHIFT(smart_shft, &sk LSHFT, &caps_word) 
+    &caps_word {  // mods deactivate caps-word, requires PR #1451
+        /delete-property/ ignore-modifiers;
+    };
+
+// urob smart num
 #define SMART_NUM &smart_num NUM 0
 ZMK_BEHAVIOR(smart_num, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
+             flavor = "balanced";
+tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&num_dance>;
 )
 ZMK_BEHAVIOR(num_dance, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
-)
+             tapping-term-ms = <300>;
+             bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
+             )
 &num_word {  // num-word, requires PR #1451
     layers = <NUM>;
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
 
+// combo stuff
+MAKE_MORPH_SHIFT(bs_del, &kp BSPC, &kp DEL) 
 
-// mods for combos
 
 
-#define MAKE_SFTMORPH(NAME, TAP, MODTAP) \
-ZMK_BEHAVIOR(NAME, mod_morph, \
-    bindings = <TAP>, <MODTAP>; \
-    mods = <(MOD_LSFT|MOD_RSFT)>; \
-)
-MAKE_SFTMORPH(bs_del, &kp BSPC, &kp DEL) 
+
+
+
+
 
 
 #define CANCEL      &kp K_CANCEL
