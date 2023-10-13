@@ -1,0 +1,5 @@
+#define COMBO_TERM_FAST 35
+#define COMBO_TERM_SLOW 40
+
+
+ZMK_COMBO(combo_num_layer, &smart_num NUM 0, LM1 LM3, DEF NUM, COMBO_TERM_FAST)

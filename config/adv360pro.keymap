@@ -31,6 +31,7 @@
 #define MOD 3
 
 #include "custom_behaviors.h"
+#include "combos.dtsi"
 
 / {
     /* remove unused keys from layout and move thumb cluster to bottom */
@@ -44,9 +45,9 @@
         base_layer {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     &swapper         ___   &kp Y     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
+                &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     &swapper         ___   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
                 &kp TAB   &a_de_ae 0 A    &s_de_esz 0 S     &kp D     &kp F     &kp G     ___    &none     &kp H     &kp J     &kp K     &kp L     &qmark_excl  &kp SQT
-                &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
+                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
                                                         &bs_del &esc_cancel   &hml END HOME        &hmr PG_DN PG_UP &enter_tab &space_tab
