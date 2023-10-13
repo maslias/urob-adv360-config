@@ -145,9 +145,3 @@ ZMK_BEHAVIOR(swapper, tri_state,
     ignored-key-positions = <LT2>;
 )
 
-
-
-
-
-#define CANCEL      &kp K_CANCEL
-
