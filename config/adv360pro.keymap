@@ -45,7 +45,7 @@
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
                 &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     &swapper         ___   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                &kp TAB   &kp A    &kp S     &kp D     &kp F     &kp G     ___    &none     &kp H     &kp J     &kp K     &kp L     &qmark_excl  &kp SQT
+                &kp TAB   &a_de_ae 0 A    &s_de_ S     &kp D     &kp F     &kp G     ___    &none     &kp H     &kp J     &kp K     &kp L     &qmark_excl  &kp SQTlk-
                 &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
