@@ -133,10 +133,6 @@ MAKE_MORPH_SHIFT(minus_under, &kp MINUS, &kp UNDER)
 MAKE_MORPH_SHIFT(plus_astrk, &kp PLUS, &kp ASTRK)
 MAKE_MORPH_SHIFT(semi_colon, &kp SEMI, &kp COLON)
 
-ZMK_BEHAVIOR(swapper, tri_state,
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>, <&navi_word>;
-    ignored-key-positions = <LT2>;
-)
 
 // german stuff
 
@@ -149,3 +145,52 @@ MAKE_HTAP(e_de_eur,&euro_sign, &kp)
 
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
+
+
+
+
+#define SMART_MACRO &smart_macro 0 0
+ZMK_BEHAVIOR(smart_macro, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&windows_navi_hold>, <&macro_dance>;
+)
+ZMK_BEHAVIOR(macro_dance, tap_dance,
+    tapping-term-ms = <300>;
+    bindings = <&windows_tab_alt_shft>, <&windows_tab>;  
+)
+
+ZMK_BEHAVIOR(windows_tab, macro,
+    bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LGUI>
+		, <&macro_tap &navi_word>
+                ;
+)
+
+ZMK_BEHAVIOR(windows_tab_alt_shft, macro,
+    bindings
+                = <&macro_press &kp RSHFT>
+		, <&macro_press &kp RCTRL>
+		, <&macro_press &kp LALT>
+		, <&macro_tap &kp TAB>
+		, <&macro_release &kp LALT>
+		, <&macro_release &kp RCTRL>
+		, <&macro_release &kp RSHFT>
+                , <&macro_tap &navi_word>
+                ;
+)
+
+ZMK_BEHAVIOR(windows_navi_hold, macro,
+    bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+		, <&macro_press &mo NAVI>
+                , <&macro_pause_for_release>
+		, <&macro_release &mo NAVI>
+                , <&macro_release &kp LCTRL>
+		, <&macro_release &kp LGUI>
+                ;
+)
