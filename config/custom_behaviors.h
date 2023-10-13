@@ -64,7 +64,7 @@ ZMK_BEHAVIOR(NAME, mod_morph, \
     mods = <(MOD_LSFT|MOD_RSFT)>; \
 )
     
-#define MAKE_HTAP(NAME, TAP, HOLD) \
+#define MAKE_HTAP(NAME, HOLD, TAP) \
 ZMK_BEHAVIOR(NAME, hold_tap, \
     flavor = "balanced"; \
     tapping-term-ms = <200>; \
