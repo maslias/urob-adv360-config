@@ -132,6 +132,11 @@ MAKE_MORPH_SHIFT(minus_under, &kp MINUS, &kp UNDER)
 MAKE_MORPH_SHIFT(plus_astrk, &kp PLUS, &kp ASTRK)
 MAKE_MORPH_SHIFT(semi_colon, &kp SEMI, &kp COLON)
 
+ZMK_BEHAVIOR(swapper, tri_state,
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <LT2>;
+)
+
 // german stuff
 
 MAKE_HTAP(a_de_ae,&de_ae, &kp)
