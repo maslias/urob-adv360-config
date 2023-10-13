@@ -61,6 +61,14 @@ ZMK_BEHAVIOR(NAME, mod_morph, \
     bindings = <TAP>, <MODTAP>; \
     mods = <(MOD_LSFT|MOD_RSFT)>; \
 )
+    
+#define MAKE_HTAP(NAME, TAP, HOLD) \
+ZMK_BEHAVIOR(NAME, hold_tap, \
+    flavor = "balanced"; \
+    tapping-term-ms = <200>; \
+    quick-tap-ms = <QUICK_TAP_MS>; \
+    bindings = <HOLD>, <TAP>;
+)
 
 
 
@@ -87,12 +95,7 @@ MAKE_MORPH_SHIFT(smart_shft, &sk LSHFT, &caps_word)
 
 // urob smart num
 #define SMART_NUM &smart_num NUM 0
-ZMK_BEHAVIOR(smart_num, hold_tap,
-             flavor = "balanced";
-tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&num_dance>;
-)
+MAKE_HTAP(smart_num, &mo, &num_dance)
 ZMK_BEHAVIOR(num_dance, tap_dance,
              tapping-term-ms = <300>;
              bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
@@ -127,8 +130,20 @@ MAKE_MORPH_SHIFT(minus_under, &kp MINUS, &kp UNDER)
 MAKE_MORPH_SHIFT(plus_astrk, &kp PLUS, &kp ASTRK)
 MAKE_MORPH_SHIFT(semi_colon, &kp SEMI, &kp COLON)
 
+// german stuff
 
+MAKE_HTAP(a_de_ae,&de_ae, &kp)
+MAKE_HTAP(u_de_ue,&de_ue, &kp)
+MAKE_HTAP(o_de_oe,&de_oe, &kp)
+MAKE_HTAP(s_de_esz,&de_eszett, &kp)
+MAKE_HTAP(e_de_eur,&euro_sign, &kp)
 
+ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
+
+ZMK_BEHAVIOR(swapper, tri_state,
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <LT2>;
+)
 
 
 
