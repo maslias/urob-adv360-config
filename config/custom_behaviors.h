@@ -90,7 +90,7 @@ MAKE_HRM_SHIFT(hmrs, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shif
 
 MAKE_HRM(hmr_qmark_excl, &kp, &qmark_excl, KEYS_L THUMBS)  // right-hand
 
-MAKE_HRM(hml_num_layer, &kp, &smart_num NUM 0, KEYS_R THUMBS)
+MAKE_HRM(hml_num_layer, &kp, SMART_NUM, KEYS_R THUMBS)
 MAKE_HRM(hml_dqt_sqt, &kp, &dqt_sqt, KEYS_R THUMBS)
 MAKE_HRM(hml_pipe_tilt, &kp, &pipe_tilt, KEYS_R THUMBS)
 
