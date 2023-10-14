@@ -4,7 +4,7 @@
 #define HRC_dqt_sqt &hml_dqt_sqt LS(LCTRL) 0
 #define HRC_pipe_tilt &hml_pipe_tilt LA(LCTRL) 0
 
-ZMK_COMBO(combo_num_layer, &smart_num NUM 0 LM1 LM3, DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO(combo_num_layer, &smart_num NUM 0, LM1 LM3, DEF NUM, COMBO_TERM_FAST)
 
 ZMK_COMBO(combo_lt_gt, &lt_gt, LT1 LT2, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_dqt_sqt, HRC_dqt_sqt, LM1 LM2, DEF NUM, COMBO_TERM_SLOW)
