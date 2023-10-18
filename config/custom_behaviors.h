@@ -90,13 +90,14 @@ MAKE_HRM_SHIFT(hmrs, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shif
 
 MAKE_HRM(hmr_qmark_excl, &kp, &qmark_excl, KEYS_L THUMBS)  // right-hand
 MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS)
+MAKE_HRM(hmr_layer, &mo, &kp, KEYS_L THUMBS)
 
 MAKE_HRM(hml_dqt_sqt, &kp, &dqt_sqt, KEYS_R THUMBS)
 MAKE_HRM(hml_pipe_tilt, &kp, &pipe_tilt, KEYS_R THUMBS)
 
 // urbo smart shift
-MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word) 
-MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word) 
+MAKE_MORPH_SHIFT(smart_shft_l, &caps_word, &sk LSHFT) 
+MAKE_MORPH_SHIFT(smart_shft_r, &caps_word, &sk RSHFT) 
     &caps_word {  // mods deactivate caps-word, requires PR #1451
         /delete-property/ ignore-modifiers;
     };
