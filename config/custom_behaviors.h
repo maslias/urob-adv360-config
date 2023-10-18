@@ -102,6 +102,7 @@ MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word)
 
 // urob smart num
 #define SMART_NUM &smart_num NUM 0
+MAKE_HTAP(smart_ger, &mo, &sl)
 MAKE_HTAP(smart_num, &mo, &num_dance)
 ZMK_BEHAVIOR(num_dance, tap_dance,
              tapping-term-ms = <300>;
