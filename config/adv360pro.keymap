@@ -60,7 +60,7 @@ behaviors {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
                 &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     ___         ___   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp TAB   &hml LGUI A    &hml LALT S     &hml LCTRL D     &hmls LSHFT F     &kp G     SMART_MACRO    &none     &kp H     &hmrs RSHFT J     &hmr LCTRL K     &hmr LALT L     &hmr_qmark_excl LGUI 0  &kp SQT
+                &kp TAB   &hml LGUI A    &hml LALT S     &hml LCTRL D     &hmls LSHFT F     &hml_layer NAVI G     SMART_MACRO    &none     &kp H     &hmrs RSHFT J     &hmr LCTRL K     &hmr LALT L     &hmr_qmark_excl LGUI 0  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &to DEF  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &smart_shft_l &kp HOME       &kp PG_UP  SMART_NUM 
