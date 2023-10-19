@@ -26,12 +26,13 @@
 #define ___ &trans
 
 #define DEF 0
-#define NUM 1
-#define FN 2
-#define NAVI 3
-#define GER 4
-#define BACKUP 5
-#define MOD 6
+#define MAIN 1
+#define HMR 2
+#define NUM 3
+#define FN 4
+#define NAVI 5
+#define GER 6
+#define MOD 7
 
 #include "combos.dtsi"
 #include "custom_behaviors.h"
@@ -55,8 +56,34 @@ behaviors {
 
     keymap {
         compatible = "zmk,keymap";
+        hybrid_layer {
+            bindings = <
+                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+                &kp CAPS   &hml TAB Q     &hml LGUI W     &hml LALT E     &hml LCTRL R     &kp T     &to MAIN         ___   &kp Z     &hmr LCTRL U     &hmr LALT I     &hmr LGUI O     &hmr TAB P     &kp BSLH
+                &kp TAB   &kp A    &kp S     &hml_layer NAVI D     &hml_layer NUM F     &kp G     SMART_MACRO    ___     &kp H     &hmr_layer GER J     &hmr_layer NAVI K     &kp L     &qmark_excl  &kp SQT
+                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
+                &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
+                &kp TAB &kp LALT       &kp LGUI  SMART_NUM
+                &bs_del     &kp LCTRL   &home_end        &pg_up_dn  &smart_shft_l &kp SPACE
+                &esc_cancel       &kp ENTER
+                >;
+        };
 
-        base_layer {
+        main_layer {
+            bindings = <
+                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+                &kp CAPS   &kp Q     &kp W     &e_de_eur E     &kp R     &kp T     ___         ___   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
+                &kp TAB   &a_de_ae 0 A    &s_de_esz 0 S     &kp D     &kp F     &kp G     SMART_MACRO    &none     &kp H     &kp J     &kp K     &kp L     &qmark_excl  &kp SQT
+                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
+                &mo FN    &kp GRAVE &mo NAVI  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
+                                                                    &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
+                                                    &bs_del    &esc_cancel   &home_end        &pg_up_dn &enter_tab &space_tab
+                                                                    &smart_shft_l       &smart_shft_r
+                >;
+        };
+
+
+        hmr_layer {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
                 &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     ___         ___   &kp Z     &kp U     &kp I     &kp O     &kp P     &kp BSLH
@@ -122,18 +149,6 @@ behaviors {
             >;
         };
 
-        backup_layer {
-            bindings = <
-                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     ___         ___   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp TAB   &a_de_ae 0 A    &s_de_esz 0 S     &hml LCTRL D     &hmls LSHFT F     &kp G     SMART_MACRO    &none     &kp H     &hmrs RSHFT J     &hmr LCTRL K     &kp L     &qmark_excl  &kp SQT
-                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
-                &mo FN    &kp GRAVE &mo NAVI  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
-                                                        &bs_del &esc_cancel   &hml END HOME        &hmr PG_DN PG_UP &enter_tab &space_tab
-                                                                            &smart_shft_l       &smart_shft_r
-            >;
-        };
         mod {
             bindings = <
                 ___       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 ___              ___         &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 ___

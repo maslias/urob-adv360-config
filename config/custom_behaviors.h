@@ -92,8 +92,16 @@ MAKE_HRM(hmr_qmark_excl, &kp, &qmark_excl, KEYS_L THUMBS)  // right-hand
 MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmr_layer, &mo, &kp, KEYS_L THUMBS)
 
-MAKE_HRM(hml_dqt_sqt, &kp, &dqt_sqt, KEYS_R THUMBS)
-MAKE_HRM(hml_pipe_tilt, &kp, &pipe_tilt, KEYS_R THUMBS)
+MAKE_HRM(hml_lt_gt, &kp, &lt_gt, KEYS_R THUMBS)
+MAKE_HRM(hml_dllr_amps, &kp, &dllr_amps, KEYS_R THUMBS)
+MAKE_HRM(hml_layer_dqt_sqt, &mo, &dqt_sqt, KEYS_R THUMBS)
+
+MAKE_HRM(hmr_lbkt_rbkt, &kp, &lbkt_rbkt, KEYS_L THUMBS)
+MAKE_HRM(hmr_equal_prcnt, &kp, &equal_prcnt, KEYS_L THUMBS)
+MAKE_HRM(hml_layer_lpar_rpar, &mo, &lpar_rpar, KEYS_L THUMBS)
+
+// MAKE_HRM(hml_dqt_sqt, &kp, &dqt_sqt, KEYS_R THUMBS)
+// MAKE_HRM(hml_pipe_tilt, &kp, &pipe_tilt, KEYS_R THUMBS)
 
 // urbo smart shift
 MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word) 
@@ -140,6 +148,10 @@ MAKE_MORPH_SHIFT(minus_under, &kp MINUS, &kp UNDER)
 MAKE_MORPH_SHIFT(plus_astrk, &kp PLUS, &kp ASTRK)
 MAKE_MORPH_SHIFT(semi_colon, &kp SEMI, &kp COLON)
 
+
+// thumbs stuff
+MAKE_MORPH_SHIFT(home_end, &kp HOME, &kp END)
+MAKE_MORPH_SHIFT(pg_up_dn, &kp PG_UP, &kp PG_DN)
 
 // german stuff
 
