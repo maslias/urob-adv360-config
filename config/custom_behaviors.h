@@ -92,16 +92,12 @@ MAKE_HRM(hmr_qmark_excl, &kp, &qmark_excl, KEYS_L THUMBS)  // right-hand
 MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmr_layer, &mo, &kp, KEYS_L THUMBS)
 
-MAKE_HRM(hml_lt_gt, &kp, &lt_gt, KEYS_R THUMBS)
-MAKE_HRM(hml_dllr_amps, &kp, &dllr_amps, KEYS_R THUMBS)
-MAKE_HRM(hml_layer_dqt_sqt, &mo, &dqt_sqt, KEYS_R THUMBS)
+MAKE_HRM(hml_dqt_sqt, &kp, &dqt_sqt, KEYS_R THUMBS)
+MAKE_HRM(hml_pipe_tilt, &kp, &pipe_tilt, KEYS_R THUMBS)
 
-MAKE_HRM(hmr_lbkt_rbkt, &kp, &lbkt_rbkt, KEYS_L THUMBS)
-MAKE_HRM(hmr_equal_prcnt, &kp, &equal_prcnt, KEYS_L THUMBS)
-MAKE_HRM(hml_layer_lpar_rpar, &mo, &lpar_rpar, KEYS_L THUMBS)
+MAKE_HRM(hml_lpar_rpar, &kp, &lpar_rpar, KEYS_L THUMBS)
+MAKE_HRM(hml_minus_under, &kp, &minus_under, KEYS_L THUMBS)
 
-// MAKE_HRM(hml_dqt_sqt, &kp, &dqt_sqt, KEYS_R THUMBS)
-// MAKE_HRM(hml_pipe_tilt, &kp, &pipe_tilt, KEYS_R THUMBS)
 
 // urbo smart shift
 MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word) 
@@ -112,7 +108,7 @@ MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word)
 
 // urob smart num
 #define SMART_NUM &smart_num NUM 0
-MAKE_HTAP(smart_ger, &mo, &sl)
+// MAKE_HTAP(smart_ger, &mo, &sl)
 MAKE_HTAP(smart_num, &mo, &num_dance)
 ZMK_BEHAVIOR(num_dance, tap_dance,
              tapping-term-ms = <300>;
@@ -123,6 +119,7 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
+MAKE_HTAP(lt_bs_del,&mo, &bs_del)
 
 // combo stuff
 MAKE_MORPH_SHIFT(bs_del, &kp BSPC, &kp DEL) 
