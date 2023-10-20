@@ -60,12 +60,12 @@ behaviors {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
                 &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     &to MAIN         ___   &kp Z     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     SMART_MACRO    ___     &kp H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
+                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    ___     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
-                &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp TAB &kp HOME       &kp PG_UP  &kp K_CANCEL 
-                                                        &lt_bs_del NUM 0 &hmls LSHFT ESC   &kp END         &kp PG_DN  &hmrs RSHFT ENTER &lt GER SPACE
-                                                                            SMART_NUM       &smart_shft_l
+                &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
+                                                                  &kp TAB &kp HOME       &pg_up_dn  &kp K_CANCEL 
+                                    &lt_bs_del NUM 0 &hmls LSHFT ESC   &kp END                     SMART_NUM  &hmrs RSHFT ENTER &lt GER SPACE
+                                                                            &kp LCTRL       &smart_shft_l
                 >;
         };
 
