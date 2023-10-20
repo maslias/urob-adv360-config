@@ -120,6 +120,7 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 };
 
 MAKE_HTAP(lt_bs_del,&mo, &bs_del)
+MAKE_HTAP(hmt, &kp, &kp)
 
 // combo stuff
 MAKE_MORPH_SHIFT(bs_del, &kp BSPC, &kp DEL) 
