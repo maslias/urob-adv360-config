@@ -27,14 +27,13 @@
 #define ___ &trans
 
 #define DEF 0
-#define MAIN 1
-#define THUMBS_1 2
-#define THUMBS_2 3
-#define NUM 4
-#define FN 5
-#define NAVI 6
-#define GER 7
-#define MOD 8
+#define THUMBS_1 1
+#define THUMBS_2 2
+#define NUM 3
+#define FN 4
+#define NAVI 5
+#define GER 6
+#define MOD 7
 
 #include "combos.dtsi"
 #include "custom_behaviors.h"
@@ -58,24 +57,12 @@ behaviors {
 
     keymap {
         compatible = "zmk,keymap";
-        def_thumb_ver_3 {
-            bindings = <
-                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to MAIN         &to THUMBS_2   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THUMBS_1     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
-                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
-                &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  SMART_NUM &kp HOME       &pg_up_dn  &kp TAB 
-                                    &lt_bs_del NUM 0 &smart_shft_l    &kp END                     &kp K_CANCEL  &enter_esc &kp SPACE
-                                                                            &kp LCTRL       &kp ESC
-                >;
-        };
 
         main_layer {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to DEF         &none   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &none     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
+                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to DEF         &to THUMBS_1   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
+                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THUMBS_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                     &kp LCTRL &kp LALT       &kp LGUI  &kp TAB
@@ -87,7 +74,7 @@ behaviors {
         thumb_ver_1 {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to MAIN         &to DEF   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
+                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to DEF          &to THUMBS_1   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
                 &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THUMBS_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
@@ -100,8 +87,8 @@ behaviors {
         thumb_ver_2 {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to MAIN         &to THUMBS_1   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to DEF     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
+                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to DEF         &to THUMBS_1   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
+                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THUMBS_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   SMART_NUM &none       &none  &kp TAB 
