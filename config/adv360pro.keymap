@@ -1,3 +1,4 @@
+
 /*                                 ADVANTAGE 360 KEY MATRIX / LAYOUT MAPPING
  ╭────────────────────────────┬────────────────────────────╮ ╭────────────────────────────┬────────────────────────────╮
  │  0   1   2   3   4   5   6 │  7   8   9  10  11  12  13 │ │ LN5 LN4 LN3 LN2 LN1 LN0 -- │ --  RN0 RN1 RN2 RN3 RN4 RN5│
@@ -27,7 +28,8 @@
 
 #define DEF 0
 #define MAIN 1
-#define HMR 2
+#define THUMBS_1 2
+#define THUMBS_2 3
 #define NUM 3
 #define FN 4
 #define NAVI 5
@@ -56,16 +58,16 @@ behaviors {
 
     keymap {
         compatible = "zmk,keymap";
-        hybrid_layer {
+        def_thumb_ver_3 {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     &to MAIN         ___   &kp Z     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    ___     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
+                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to MAIN         &to THUMBS_2   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
+                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THUMBS_1     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp TAB &kp HOME       &pg_up_dn  &kp K_CANCEL 
-                                    &lt_bs_del NUM 0 &hmt LSHFT ESC   &kp END                     SMART_NUM  &hmt RSHFT ENTER &lt GER SPACE
-                                                                            &kp LCTRL       &smart_shft_l
+                                                                  SMART_NUM &kp HOME       &pg_up_dn  &kp TAB 
+                                    &lt_bs_del NUM 0 &smart_shft_l    &kp END                     &kp K_CANCEL  &kp LCTRL &kp SPACE
+                                                                            &kp ESC       &kp ENTER 
                 >;
         };
 
@@ -73,7 +75,7 @@ behaviors {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
                 &kp CAPS   &kp Q     &kp W     &e_de_eur 0 E     &kp R     &kp T     &to DEF         ___   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp TAB   &a_de_ae 0 A    &s_de_esz 0 S     &hml_layer NAVI D     &hml_layer NUM F     &kp G     SMART_MACRO    &none     &kp H     &hmr_layer GER J     &hmr_layer NAVI K     &kp L     &qmark_excl  &kp SQT
+                &kp TAB   &a_de_ae 0 A    &s_de_esz 0 S     &kp D     &kp F     &hml_layer NAVI G     SMART_MACRO    &none     &hmr_layer NAVI H     &kp  J     &hmr_layer NAVI K     &kp L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                     &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
@@ -82,19 +84,32 @@ behaviors {
                 >;
         };
 
-
-        hmr_layer {
+        thumb_ver_1 {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &kp Q     &kp W     &kp E     &kp R     &kp T     ___         ___   &kp Z     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                &kp TAB   &hml LGUI A    &hml LALT S     &hml LCTRL D     &hmls LSHFT F     &hml_layer NAVI G     SMART_MACRO    &none     &hmr_layer NAVI H     &hmrs RSHFT J     &hmr LCTRL K     &hmr LALT L     &hmr_qmark_excl LGUI 0  &kp SQT
+                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to MAIN         &to DEF   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
+                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THUMBS_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
-                &mo FN    &kp GRAVE &to DEF  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp TAB &kp HOME       &kp PG_UP  &none 
-                                                        &bs_del &esc_cancel   &kp END         &kp PG_DN  &kp ENTER &kp SPACE
-                                                                            &smart_shft_l       SMART_NUM
-            >;
+                &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
+                &kp TAB &kp HOME       &pg_up_dn  &kp K_CANCEL 
+                &lt_bs_del NUM 0 &hmt LSHFT ESC   &kp END                     SMART_NUM  &hmt RSHFT ENTER &kp SPACE
+                &kp LCTRL       &smart_shft_l
+                >;
         };
+
+        thumb_ver_2 {
+            bindings = <
+                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+                &kp CAPS   &kp Q     &a_de_ae 0 W     &e_de_eur 0 E     &s_de_esz 0 R     &kp T     &to MAIN         &to THUMBS_1   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
+                &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to DEF     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
+                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
+                &mo FN    &kp GRAVE ___  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
+                                                                  SMART_NUM &kp HOME       &pg_up_dn  &kp TAB 
+                                    &lt_bs_del NUM 0 &smart_shft_l    &kp END                     &kp K_CANCEL  &enter_esc &kp SPACE
+                                                                            &kp LCTRL       &kp esc
+                >;
+        };
+
 
 
         keypad {

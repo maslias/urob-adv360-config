@@ -150,6 +150,7 @@ MAKE_MORPH_SHIFT(semi_colon, &kp SEMI, &kp COLON)
 // thumbs stuff
 MAKE_MORPH_SHIFT(home_end, &kp HOME, &kp END)
 MAKE_MORPH_SHIFT(pg_up_dn, &kp PG_UP, &kp PG_DN)
+MAKE_MORPH_SHIFT(enter_esc, &kp ENTER, &kp ESC)
 
 // german stuff
 
