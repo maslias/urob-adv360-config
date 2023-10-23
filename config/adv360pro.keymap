@@ -30,11 +30,11 @@
 #define MAIN 1
 #define THUMBS_1 2
 #define THUMBS_2 3
-#define NUM 3
-#define FN 4
-#define NAVI 5
-#define GER 6
-#define MOD 7
+#define NUM 4
+#define FN 5
+#define NAVI 6
+#define GER 7
+#define MOD 8
 
 #include "combos.dtsi"
 #include "custom_behaviors.h"
