@@ -80,7 +80,7 @@ behaviors {
                 &kp ESC &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp ENTER
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp TAB &home_end       &pg_up_dn  &kp TAB 
-                                    &lt_bs_del NUM 0 &smart_shft_l    &none                     &none  &kp LCTRL &kp SPACE
+                                    &lt_bs_del NUM 0 &smart_shft_l    &none                     &none  &kp LCTRL &lt NUM SPACE
                                                                             SMART_NUM       &none 
                 >;
         };
@@ -103,7 +103,7 @@ behaviors {
             bindings = <
                 ___       ___       ___       ___       ___       ___       ___            ___       ___       ___ ___ ___ ___ ___
                 ___       ___       ___       ___       ___       ___       ___            ___       ___       &kp N7  &kp N8    &kp N9     ___    ___
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       &kp N4  &kp N5    &kp N6     ___     ___
+                ___       ___       &kp ESC       ___       &kp ENTER       ___       ___            ___       ___       &kp N4  &kp N5    &kp N6     ___     ___
                 ___       ___       ___       ___       ___       ___                                ___       &kp N1  &kp N2    &kp N3     ___    ___
                 ___       ___       ___       ___       ___                                                    ___  ___          ___    ___             ___
                                                                   ___       ___            ___       ___
