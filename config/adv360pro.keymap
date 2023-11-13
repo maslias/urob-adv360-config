@@ -81,7 +81,7 @@ behaviors {
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp TAB &home_end       &pg_up_dn  &kp TAB 
                                     &lt_bs_del NUM 0 &smart_shft_l    &none                     &none  &kp LCTRL &lt NUM SPACE
-                                                                            SMART_NUM       &none 
+                                                                            SMART_NUM       SMART_NUM 
                 >;
         };
 
@@ -93,8 +93,8 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi    &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp TAB &home_end       &pg_up_dn  &kp TAB 
-                                    &lt_bs_del NUM 0 &smart_shft_l    SMART_NUM                     &none  &enter_esc &kp SPACE
-                                                                            &kp LCTRL       &kp ESC 
+                                    &lt_bs_del NUM 0 &smart_shft_l    &none                     &none  &enter_esc &kp SPACE
+                                                                            SMART_NUM       &kp ESC 
                 >;
         };
 
