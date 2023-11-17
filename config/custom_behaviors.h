@@ -123,7 +123,7 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 };
 
 
-MAKE_HTAP(smart_ctrl, &sk LCTRL, &kp LCTRL);
+MAKE_HTAP(smart_ctrl, &kp LCTRL, &sk LCTRL);
 
 MAKE_HTAP(lt_bs_del,&mo, &bs_del)
 MAKE_HTAP(hmt, &kp, &kp)
