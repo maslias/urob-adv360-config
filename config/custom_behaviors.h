@@ -104,6 +104,7 @@ MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word)
 MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word) 
     &caps_word {  // mods deactivate caps-word, requires PR #1451
         /delete-property/ ignore-modifiers;
+        continue-list = <MINUS UNDER>
     };
 
 // urob smart num
@@ -151,9 +152,10 @@ MAKE_MORPH_SHIFT(semi_colon, &kp SEMI, &kp COLON)
 MAKE_MORPH_SHIFT(home_end, &kp HOME, &kp END)
 MAKE_MORPH_SHIFT(pg_up_dn, &kp PG_UP, &kp PG_DN)
 MAKE_MORPH_SHIFT(enter_esc, &kp ENTER, &kp ESC)
+MAKE_MORPH_SHIFT(space_enter, &kp SPACE, &kp ENTER)
+MAKE_MORPH_SHIFT(bspc_esc, &kp BSPC, &kp ESC)
 
 // german stuff
-
 MAKE_HTAP(a_de_ae,&de_ae, &kp)
 MAKE_HTAP(u_de_ue,&de_ue, &kp)
 MAKE_HTAP(o_de_oe,&de_oe, &kp)

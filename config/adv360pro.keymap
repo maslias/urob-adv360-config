@@ -65,23 +65,9 @@ behaviors {
                 &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                    &kp TAB &kp LALT       &kp LGUI  &kp TAB
-                                                    &lt_bs_del NUM 0    &esc_cancel   SMART_NUM        &pg_up_dn &kp ENTER &kp SPACE
+                                                                    &kp LCTRL &kp LALT       &kp LGUI  &kp LCTRL
+                                                    &lt_bs_del NUM 0    &esc_cancel   &kp TAB        &pg_up_dn &kp ENTER &lt NUM SPACE
                                                                     &smart_shft_l       &smart_shft_r
-                >;
-        };
-
-
-        thumb_layer {
-            bindings = <
-                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &a_de_ae 0 Q     &s_de_esz 0 W     &e_de_eur 0 E     &kp R     &kp T     &to DEF         &to THMB   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp ESC   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp ENTER 
-                &kp ESC &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp ENTER
-                &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp TAB &home_end       &pg_up_dn  &kp TAB 
-                                    &lt_bs_del NUM 0 &smart_shft_l    &none                     &none  &kp LCTRL &lt NUM SPACE
-                                                                            SMART_NUM       SMART_NUM 
                 >;
         };
 
@@ -92,22 +78,36 @@ behaviors {
                 &kp TAB   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi    &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp TAB &home_end       &pg_up_dn  &kp TAB 
-                                    &lt_bs_del NUM 0 &smart_shft_l    &none                     &none  &enter_esc &kp SPACE
-                                                                            SMART_NUM       &kp ESC 
+                                                                  &kp LCTRL &home_end       &pg_up_dn  &kp LCTRL 
+                                    &lt_bs_del NUM 0 &smart_shft_l    SMART_NUM                     SMART_NUM  &enter_esc &lt NUM SPACE
+                                                                            &kp TAB       &kp ESC 
                 >;
         };
+
+        thumb_layer {
+            bindings = <
+                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+                &kp CAPS   &a_de_ae 0 Q     &s_de_esz 0 W     &e_de_eur 0 E     &kp R     &kp T     &to DEF         &to THMB   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
+                &kp ESC   &hml TAB A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &hml_layer NAVI G     SMART_MACRO    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp ENTER 
+                &kp ESC &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp ENTER
+                &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
+                                                                  &kp LCTRL &home_end       &pg_up_dn  &kp DEL 
+                                    &kp LCTRL &smart_shft_l    SMART_NUM                     &kp K_CANCEL  &bspc_esc &space_enter
+                                                                            &kp TAB       SMART_NUM 
+                >;
+        };
+
 
 
         keypad {
             bindings = <
                 ___       ___       ___       ___       ___       ___       ___            ___       ___       ___ ___ ___ ___ ___
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       &kp N7  &kp N8    &kp N9     ___    ___
-                ___       ___       &kp ESC       ___       &kp ENTER       ___       ___            ___       ___       &kp N4  &kp N5    &kp N6     ___     ___
-                ___       ___       ___       ___       ___       ___                                ___       &kp N1  &kp N2    &kp N3     ___    ___
+                ___       ___       &kp N7       &kp N8       &kp N9       ___       ___            ___       ___       &kp N7  &kp N8    &kp N9     ___    ___
+                ___       &kp N0       &kp N4       &kp N5       &kp N6       ___       ___            ___       ___       &kp N4  &kp N5    &kp N6     &kp N0     ___
+                ___       ___       &kp N1       &kp N2       &kp N3       ___                                ___       &kp N1  &kp N2    &kp N3     ___    ___
                 ___       ___       ___       ___       ___                                                    ___  ___          ___    ___             ___
                                                                   ___       ___            ___       ___
-                                                        ___       ___       ___            ___       ___       &kp N0
+                                                        ___       ___       ___            ___       ___       ___
                                                                             ___            ___
             >;
         };
