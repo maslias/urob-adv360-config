@@ -61,8 +61,10 @@
 #define MAKE_MORPH_SHIFT(NAME, TAP, MODTAP) \
 ZMK_BEHAVIOR(NAME, mod_morph, \
     bindings = <TAP>, <MODTAP>; \
-    mods = <(MOD_LSFT|MOD_RSFT)>; \
+    mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>; \
 )
+
+
     
 #define MAKE_HTAP(NAME, HOLD, TAP) \
 ZMK_BEHAVIOR(NAME, hold_tap, \
@@ -153,8 +155,10 @@ MAKE_MORPH_SHIFT(home_end, &kp HOME, &kp END)
 MAKE_MORPH_SHIFT(pg_up_dn, &kp PG_UP, &kp PG_DN)
 MAKE_MORPH_SHIFT(enter_esc, &kp ENTER, &kp ESC)
 MAKE_MORPH_SHIFT(space_enter, &kp SPACE, &kp ENTER)
+
 MAKE_MORPH_SHIFT(bspc_esc, &kp BSPC, &kp ESC)
 
+                 
 // german stuff
 MAKE_HTAP(a_de_ae,&de_ae, &kp)
 MAKE_HTAP(u_de_ue,&de_ue, &kp)
