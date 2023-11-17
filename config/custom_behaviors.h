@@ -104,7 +104,7 @@ MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word)
 MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word) 
     &caps_word {  // mods deactivate caps-word, requires PR #1451
         /delete-property/ ignore-modifiers;
-        continue-list = <MINUS UNDER>
+        continue-list = <MINUS UNDER>;
     };
 
 // urob smart num
