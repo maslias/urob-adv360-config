@@ -122,6 +122,9 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
+
+MAKE_HTAP(smart_ctrl, &sk LCTRL, &kp LCTRL);
+
 MAKE_HTAP(lt_bs_del,&mo, &bs_del)
 MAKE_HTAP(hmt, &kp, &kp)
 
