@@ -124,7 +124,7 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 
 
 MAKE_MORPH_SHIFT(smart_ctrl, &sk LCTRL, &kp LCTRL) 
-MAKE_HTAP(smart_ctrl_2, &kp  LCTRL, &kp LCTRL) 
+MAKE_HTAP(smart_ctrl_2, &kp LCTRL, &kp LCTRL) 
 
 MAKE_HTAP(lt_bs_del,&mo, &bs_del)
 MAKE_HTAP(hmt, &kp, &kp)
