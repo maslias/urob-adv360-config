@@ -128,7 +128,9 @@ MAKE_MORPH_SHIFT(smart_ctrl, &sk LCTRL, &kp LCTRL)
 
 MAKE_HTAP(lt_bs_del,&mo, &bs_del)
 MAKE_HTAP(hmt, &kp, &kp)
-MAKE_HTAP(mod_tap_sk, &kp, &sk)
+MAKE_HTAP(mod_tap_sk, &kp LCTRL, &sk)
+
+
 
 // combo stuff
 MAKE_MORPH_SHIFT(bs_del, &kp BSPC, &kp DEL) 
