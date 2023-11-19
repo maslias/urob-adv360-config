@@ -129,7 +129,7 @@ ZMK_BEHAVIOR(smart_ctrl_2, hold_tap,
     flavor = "balanced"; 
     tapping-term-ms = <200>; 
     quick-tap-ms = <QUICK_TAP_MS>; 
-    bindings = <&kp LCTRL>, <&kp LCTRL>; 
+    bindings = <&kp K>, <&kp K>; 
 )
 
 MAKE_HTAP(lt_bs_del,&mo, &bs_del)
