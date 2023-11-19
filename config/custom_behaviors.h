@@ -125,15 +125,10 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 
 MAKE_MORPH_SHIFT(smart_ctrl, &sk LCTRL, &kp LCTRL) 
           
-ZMK_BEHAVIOR(smart_ctrl_2, hold_tap, 
-    flavor = "balanced"; 
-    tapping-term-ms = <200>; 
-    quick-tap-ms = <QUICK_TAP_MS>; 
-    bindings = <&kp K>, <&kp K>; 
-)
 
 MAKE_HTAP(lt_bs_del,&mo, &bs_del)
 MAKE_HTAP(hmt, &kp, &kp)
+MAKE_HTAP(mod_tap_sk, &kp, &sk)
 
 // combo stuff
 MAKE_MORPH_SHIFT(bs_del, &kp BSPC, &kp DEL) 
