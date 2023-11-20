@@ -35,7 +35,6 @@
 
 
 #define CANCEL &kp K_CANCEL
-#define RHYP RS(RC(RA(RGUI)))
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
   ZMK_BEHAVIOR(NAME, hold_tap, \
