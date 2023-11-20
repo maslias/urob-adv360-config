@@ -30,11 +30,12 @@
 #define THMB 1
 #define THMB_2 2
 #define THMB_3 3
-#define NUM 4
-#define FN 5
-#define NAVI 6
-#define GER 7
-#define MOD 8
+#define NUM_LEFT 4
+#define NUM_RIGHT 5
+#define FN 6
+#define NAVI 7
+#define GER 8
+#define MOD 9
 
 #include "combos.dtsi"
 #include "custom_behaviors.h"
@@ -67,10 +68,12 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                     &kp LCTRL &kp LALT       &kp LGUI  &kp LCTRL
-                                                    &lt_bs_del NUM 0    &esc_cancel   &kp TAB        &pg_up_dn &kp ENTER &lt NUM SPACE
+                                                    &lt_bs_del NUM_RIGHT 0    &esc_cancel   &kp TAB        &pg_up_dn &kp ENTER &lt NUM_LEFT SPACE
                                                                     &smart_shft_l       &smart_shft_r
                 >;
         };
+
+
 
         thumb_2_layer {
             bindings = <
@@ -112,13 +115,27 @@ behaviors {
                 >;
         };
 
-        keypad {
+        keypad_left {
             bindings = <
                 ___       ___       ___       ___       ___       ___       ___            ___       ___       ___ ___ ___ ___ ___
                 ___       ___       &kp N7       &kp N8       &kp N9       ___       ___            ___       ___       ___  ___    ___     ___    ___
                 ___       &kp N0       &kp N4       &kp N5       &kp N6       ___       ___            ___       ___       ___  ___    ___     ___     ___
                 ___       ___       &kp N1       &kp N2       &kp N3       ___                                ___       ___  ___    ___     ___    ___
                 ___       ___       ___       ___       ___                                                    ___  ___          ___    ___             ___
+                                                                  ___       ___            ___       ___
+                                                        ___       ___       ___            ___       ___       ___
+                                                                            ___            ___
+            >;
+        };
+
+
+        keypad_right {
+            bindings = <
+                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
+                ___       ___       ___       ___       ___       ___       ___            ___       ___       &kp N7    &kp N8    &kp N9    ___       ___
+                ___       ___       ___       ___       ___       ___       ___            ___       ___       &kp N4    &kp N5    &kp N6    &kp 0     ___
+                ___       ___       ___       ___       ___       ___                                ___       &kp N1    &kp N2    &kp N3    ___       ___
+                ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
                                                                   ___       ___            ___       ___
                                                         ___       ___       ___            ___       ___       ___
                                                                             ___            ___
