@@ -35,6 +35,7 @@
 
 
 #define CANCEL &kp K_CANCEL
+#define RHYP RS(RC(RA(RGUI)))
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
   ZMK_BEHAVIOR(NAME, hold_tap, \
@@ -159,6 +160,8 @@ MAKE_MORPH_SHIFT(home_end, &kp HOME, &kp END)
 MAKE_MORPH_SHIFT(pg_up_dn, &kp PG_UP, &kp PG_DN)
 MAKE_MORPH_SHIFT(enter_esc, &kp ENTER, &kp ESC)
 MAKE_MORPH_SHIFT(space_enter, &kp SPACE, &kp ENTER)
+
+MAKE_MORPH_SHIFT(space_bspc, &kp SPACE, &kp BSPC)
 
 MAKE_MORPH_SHIFT(bspc_esc, &kp BSPC, &kp ESC)
 
