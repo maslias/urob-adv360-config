@@ -110,24 +110,14 @@ MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word)
     };
 
 // urob smart num
-#define SMART_NUM_LEFT &smart_num NUM_LEFT 0
+#define SMART_NUM &smart_num NUM 0
 MAKE_HTAP(smart_num, &mo, &num_dance)
 ZMK_BEHAVIOR(num_dance, tap_dance,
              tapping-term-ms = <300>;
-             bindings = <&num_word_left>, <&sl NUM_LEFT>;  // reverse this for sticky-num on single tap
+             bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
              )
-&num_word_left {  // num-word, requires PR #1451
-    layers = <NUM_LEFT>;
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-};
-#define SMART_NUM_RIGHT &smart_num NUM_RIGHT 0
-MAKE_HTAP(smart_num, &mo, &num_dance)
-ZMK_BEHAVIOR(num_dance, tap_dance,
-             tapping-term-ms = <300>;
-             bindings = <&num_word_right>, <&sl NUM_RIGHT>;  // reverse this for sticky-num on single tap
-             )
-&num_word_right {  // num-word, requires PR #1451
-    layers = <NUM_RIGHT>;
+&num_word {  // num-word, requires PR #1451
+    layers = <NUM>;
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
