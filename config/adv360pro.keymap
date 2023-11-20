@@ -82,8 +82,8 @@ behaviors {
                 &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &to THMB_3    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp LCTRL &home_end       &pg_up_dn  SMART_NUM 
-                                        &bs_del &smart_shft_l SMART_NUM                     &kp LCTRL  &enter_esc &kp SPACE
+                                                                  &kp LCTRL &home_end       &pg_up_dn  SMART_NUM_RIGHT 
+                                        &bs_del &smart_shft_l SMART_NUM_LEFT                     &kp LCTRL  &enter_esc &kp SPACE
                                                                             &kp TAB       &kp ESC 
                 >;
         };
@@ -96,8 +96,8 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &home_end       &pg_up_dn  &kp K_CANCEL 
-                                    &bspc_esc   &smart_shft_l    SMART_NUM                     ___   &smart_ctrl   &space_enter
-                                                                            &kp TAB       SMART_NUM 
+                                    &bspc_esc   &smart_shft_l    SMART_NUM_LEFT                     ___   &smart_ctrl   &space_enter
+                                                                            &kp TAB       SMART_NUM_RIGHT 
                 >;
         };
 
@@ -110,8 +110,8 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &home_end       &pg_up_dn  &kp K_CANCEL 
-                                    &bspc_esc   &smart_ctrl    SMART_NUM                     ___   &smart_shft_l   &space_enter
-                                                                            &kp TAB       SMART_NUM 
+                                    &bspc_esc   &smart_ctrl    SMART_NUM_LEFT                     ___   &smart_shft_l   &space_enter
+                                                                            &kp TAB       SMART_NUM_RIGHT 
                 >;
         };
 
