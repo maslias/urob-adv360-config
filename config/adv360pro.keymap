@@ -94,8 +94,8 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &home_end       &pg_up_dn  &none 
-                                    &space_bspc   &enter_esc    &none                     &none   &smart_shft_l   SMART_NUM
-                                                                            &kp ESC       &kp TAB 
+                                        &bs_del &enter_esc &kp TAB         &none  &smart_shft_l &lt NUM SPACE
+                                                                            &kp ESC       SMART_NUM 
                 >;
         };
 
