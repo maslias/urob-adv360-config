@@ -8,7 +8,7 @@
 #define HRC_minus_under &hml_minus_under LA(LGUI) 0
 
 // #define HRC_esc &hml LG(LCTRL) ESC
-#define HRC_smart_num &hmr_num_layer 0 RG(RCTRL)   
+#define HRC_smart_num &hmr_num_layer RG(RCTRL) 0
 
 
 // #define HRC_dqt_sqt &hml_dqt_sqt LS(LCTRL) 0

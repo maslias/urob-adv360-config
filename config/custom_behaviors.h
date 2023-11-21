@@ -101,7 +101,7 @@ MAKE_HRM(hml_pipe_tilt, &kp, &pipe_tilt, KEYS_R THUMBS)
 MAKE_HRM(hml_lpar_rpar, &kp, &lpar_rpar, KEYS_L THUMBS)
 MAKE_HRM(hml_minus_under, &kp, &minus_under, KEYS_L THUMBS)
 
-MAKE_HRM(hmr_num_layer, &num_word, &kp, KEYS_L THUMBS)  // right-hand
+MAKE_HRM(hmr_num_layer, &kp, &num_word, KEYS_L THUMBS)  // right-hand
 
 // urbo smart shift
 MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word) 
