@@ -94,12 +94,14 @@ MAKE_HRM(hmr_qmark_excl, &kp, &qmark_excl, KEYS_L THUMBS)  // right-hand
 MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmr_layer, &mo, &kp, KEYS_L THUMBS)
 
+
 MAKE_HRM(hml_dqt_sqt, &kp, &dqt_sqt, KEYS_R THUMBS)
 MAKE_HRM(hml_pipe_tilt, &kp, &pipe_tilt, KEYS_R THUMBS)
 
 MAKE_HRM(hml_lpar_rpar, &kp, &lpar_rpar, KEYS_L THUMBS)
 MAKE_HRM(hml_minus_under, &kp, &minus_under, KEYS_L THUMBS)
 
+MAKE_HRM(hmr_num_layer, &num_word, &kp, KEYS_L THUMBS)  // right-hand
 
 // urbo smart shift
 MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word) 
