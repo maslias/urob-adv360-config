@@ -81,7 +81,7 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &home_end       &pg_up_dn  &none  
-                                        &kp BSPC &smart_shft_l &kp DEL                     SMART_NUM  &enter_esc &mt LC(LS(LALT)) SPACE
+                                        &mt LC(LALT(&mo NAVI)) BSPC &smart_shft_l &kp DEL                     SMART_NUM  &enter_esc &mt LC(LS(LALT)) SPACE
                                                                             &kp TAB       &kp ESC 
                 >;
         };
