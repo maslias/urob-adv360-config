@@ -81,7 +81,7 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &home_end       &pg_up_dn  &none  
-                                        &mt LC(LG(&mo NAVI)) BSPC &smart_shft_l &kp DEL                     SMART_NUM  &enter_esc &mt LC(LA(LGUI)) SPACE
+                                        &mt LC(LGUI) BSPC &smart_shft_l &kp DEL                     SMART_NUM  &enter_esc &mt LA(LC(LSHFT)) SPACE
                                                                             &kp TAB       &kp ESC 
                 >;
         };
@@ -94,7 +94,7 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &pg_up_dn       &home_end  &none 
-                                                            &mt LC(LG(&mo NAVI)) BSPC &enter_esc &kp DEL         SMART_NUM  &smart_shft_l &mt LC(LA(LGUI)) SPACE
+                                                            &mt LC(LGUI) BSPC &enter_esc &kp DEL         SMART_NUM  &smart_shft_l &mt LA(LC(LSHFT)) SPACE
                                                                             &kp ESC       &kp TAB 
                 >;
         };
