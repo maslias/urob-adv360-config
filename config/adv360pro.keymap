@@ -80,9 +80,9 @@ behaviors {
                 &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &none    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp LCTRL &home_end       &pg_up_dn  &kp ESC 
-                                        &bs_del &smart_shft_l &none                     &none  &enter_esc &lt NUM SPACE
-                                                                            &kp TAB       SMART_NUM 
+                                                                  &kp LCTRL &home_end       &pg_up_dn  &none  
+                                        &bs_del &smart_shft_l &none                     SMART_NUM  &enter_esc &mt LC(LS(LALT)) SPACE
+                                                                            &kp TAB       &kp ESC 
                 >;
         };
 
@@ -94,15 +94,15 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &home_end       &pg_up_dn  &none 
-                                        &bs_del &enter_esc &kp TAB         &none  &smart_shft_l &lt NUM SPACE
-                                                                            &kp ESC       SMART_NUM 
+                                                            &bs_del &enter_esc SMART_NUM         &none  &smart_shft_l &mt LC(LS(LALT)) SPACE
+                                                                            &kp ESC       &kp TAB 
                 >;
         };
 
         keypad {
             bindings = <
                 ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       &kp N7    &kp N8    &kp N9    ___       ___            ___       ___       ___       ___       ___       ___       ___
+                ___       ___      &kp N7    &kp N8    &kp N9    ___       ___            ___       ___       ___       ___       ___       ___       ___
                 ___       &kp N0     &kp N4    &kp N5    &kp N6    ___       ___            ___       ___       ___       ___       ___       ___       ___
                 ___       ___       &kp N1    &kp N2    &kp N3    ___                                ___       ___       ___       ___       ___       ___
                 ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
