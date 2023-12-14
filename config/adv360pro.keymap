@@ -65,8 +65,8 @@ behaviors {
                 &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &none    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                    &kp LCTRL &kp LALT       &kp LGUI  &kp LCTRL
-                                                    &bs_del    &esc_cancel   &kp TAB        &pg_up_dn &kp ENTER &lt NUM SPACE
+                                                                    &kp LCTRL &home_end       &pg_up_dn  &kp LCTRL
+                                                    &hml LC(LGUI) BSPC    &esc_cancel   &kp TAB        SMART_NUM &kp ENTER &hmr LC(LA(LGUI)) SPACE
                                                                     &smart_shft_l       &smart_shft_r
                 >;
         };
@@ -80,8 +80,8 @@ behaviors {
                 &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &none    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp LCTRL &home_end       &pg_up_dn  &none  
-                                        &mt LC(LGUI) BSPC &smart_shft_l &kp DEL                     SMART_NUM  &enter_esc &mt LA(LC(LSHFT)) SPACE
+                                                                  &kp LCTRL &home_end       &pg_up_dn  &mo GER  
+                                        &hml LC(LGUI) BSPC &smart_shft_l &kp DEL                     SMART_NUM  &enter_esc &hmr LC(LA(LGUI)) SPACE
                                                                             &kp TAB       &kp ESC 
                 >;
         };
@@ -93,8 +93,8 @@ behaviors {
                 &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &none    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp LCTRL &pg_up_dn       &home_end  &none 
-                                                            &mt LC(LGUI) BSPC &enter_esc &kp DEL         SMART_NUM  &smart_shft_l &mt LA(LC(LSHFT)) SPACE
+                                                                  &kp LCTRL &pg_up_dn       &home_end  &mo GER 
+                                                            &hml LC(LGUI) BSPC &enter_esc &kp DEL         SMART_NUM  &smart_shft_l &hmr LC(LA(LGUI)) SPACE
                                                                             &kp ESC       &kp TAB 
                 >;
         };

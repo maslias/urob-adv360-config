@@ -70,7 +70,7 @@
 #define MAKE_MORPH_SHIFT(NAME, TAP, MODTAP) \
 ZMK_BEHAVIOR(NAME, mod_morph, \
     bindings = <TAP>, <MODTAP>; \
-    mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>; \
+    mods = <(MOD_LSFT|MOD_RSFT)>; \
 )
 
 
