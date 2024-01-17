@@ -72,6 +72,11 @@ ZMK_BEHAVIOR(NAME, mod_morph, \
     bindings = <TAP>, <MODTAP>; \
     mods = <(MOD_LSFT|MOD_RSFT)>; \
 )
+#define MAKE_MORPH_CTL(NAME, TAP, MODTAP) \
+ZMK_BEHAVIOR(NAME, mod_morph, \
+    bindings = <TAP>, <MODTAP>; \
+    mods = <(MOD_LCTL|MOD_RCTL)>; \
+)
 
 
     
@@ -107,11 +112,18 @@ MAKE_HRM(hmr_num_layer, &kp, &num_word, KEYS_L THUMBS)  // right-hand
 
 // urbo smart shift
 MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word) 
+    &caps_word {  // mods deactivate caps-word, requires PR #1451
+        /delete-property/ ignore-modifiers;
+        continue-list = <MINUS UNDER>;
+    };
+
 MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word) 
     &caps_word {  // mods deactivate caps-word, requires PR #1451
         /delete-property/ ignore-modifiers;
         continue-list = <MINUS UNDER>;
     };
+
+MAKE_MORPH_CTL(smart_ctl_l, &sk LCTRL, &kp LCTRL)
 
 // urob smart num
 #define SMART_NUM &smart_num NUM 0
