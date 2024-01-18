@@ -113,8 +113,8 @@ MAKE_HRM(hmr_num_layer, &kp, &num_word, KEYS_L THUMBS)  // right-hand
 // urbo smart shift
 MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word) 
     &caps_word {  // mods deactivate caps-word, requires PR #1451
-        /delete-property/ ignore-modifiers;
-        continue-list = <MINUS UNDER>;
+        // /delete-property/ ignore-modifiers;
+        continue-list = <MINUS UNDER UNDERSCORE>;
     };
 
 MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word) 
