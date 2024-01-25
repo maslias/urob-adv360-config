@@ -154,6 +154,7 @@ ZMK_BEHAVIOR(shft_dance, tap_dance,
         continue-list = <MINUS UNDER UNDERSCORE>;
     };
 MAKE_MORPH_CTL(smart_shft_enter, SMART_SHFT, &kp ENTER)
+MAKE_MORPH_CTL(smart_shft_esc, SMART_SHFT, &kp ESC)
 
 
 #define SMART_CTL &smart_ctl LCTRL 0
@@ -167,9 +168,14 @@ ZMK_BEHAVIOR(ctl_dance, tap_dance,
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 MAKE_MORPH_SHIFT(smart_ctl_esc, SMART_CTL, &kp ESC) 
+MAKE_MORPH_SHIFT(smart_ctl_enter, SMART_CTL, &kp ENTER)
 
           
 
+ZMK_BEHAVIOR(copy_paste_dance, tap_dance,
+             tapping-term-ms = <270>;
+             bindings = <&kp K_COPY>, <&kp K_PASTE>;  // reverse this for sticky-num on single tap
+             )
 
 
 
