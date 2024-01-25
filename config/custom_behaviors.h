@@ -174,7 +174,7 @@ MAKE_MORPH_SHIFT(smart_ctl_enter, SMART_CTL, &kp ENTER)
 
 ZMK_BEHAVIOR(copy_paste_dance, tap_dance,
              tapping-term-ms = <270>;
-             bindings = <&kp K_COPY>, <&kp K_PASTE>;  // reverse this for sticky-num on single tap
+             bindings = <&kp LC(INS)>, <&kp LC(V)>;  // reverse this for sticky-num on single tap
              )
 
 
