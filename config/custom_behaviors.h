@@ -124,7 +124,7 @@ MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word)
 #define SMART_NUM &smart_num NUM 0
 MAKE_HTAP(smart_num, &mo, &num_dance)
 ZMK_BEHAVIOR(num_dance, tap_dance,
-             tapping-term-ms = <300>;
+             tapping-term-ms = <150>;
              bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
              )
 &num_word {  // num-word, requires PR #1451
@@ -135,7 +135,7 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 #define SMART_SHFT &smart_shft LSHFT 0
 MAKE_HTAP(smart_shft, &kp, &shft_dance)
 ZMK_BEHAVIOR(shft_dance, tap_dance,
-             tapping-term-ms = <300>;
+             tapping-term-ms = <150>;
              bindings = <&sk LSHFT>, <&caps_word>;  // reverse this for sticky-num on single tap
              )
 &caps_word {  // mods deactivate caps-word, requires PR #1451
@@ -147,7 +147,7 @@ MAKE_MORPH_CTL(smart_shft_esc, SMART_SHFT, &kp ESC)
 #define SMART_CTL &smart_ctl LCTRL 0
 MAKE_HTAP(smart_ctl, &kp, &ctl_dance)
 ZMK_BEHAVIOR(ctl_dance, tap_dance,
-             tapping-term-ms = <300>;
+             tapping-term-ms = <150>;
              bindings = <&sk LCTRL>, <&num_word>;  // reverse this for sticky-num on single tap
              )
 &num_word {  // num-word, requires PR #1451
