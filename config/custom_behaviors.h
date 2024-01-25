@@ -153,7 +153,8 @@ ZMK_BEHAVIOR(shft_dance, tap_dance,
         /delete-property/ ignore-modifiers;
         continue-list = <MINUS UNDER UNDERSCORE>;
     };
-MAKE_MORPH_CTL(smart_shft_esc, SMART_SHFT, &kp ESC)
+MAKE_MORPH_CTL(smart_shft_enter, SMART_SHFT, &kp ENTER)
+
 
 #define SMART_CTL &smart_ctl LCTRL 0
 MAKE_HTAP_L(smart_ctl, &kp, &ctl_dance)
@@ -165,7 +166,7 @@ ZMK_BEHAVIOR(ctl_dance, tap_dance,
     layers = <NUM>;
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
-MAKE_MORPH_SHIFT(smart_ctl_enter, SMART_CTL, &kp ENTER) 
+MAKE_MORPH_SHIFT(smart_ctl_esc, SMART_CTL, &kp ESC) 
 
           
 
