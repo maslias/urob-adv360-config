@@ -121,13 +121,20 @@ MAKE_HRM(hml_minus_under, &kp, &minus_under, KEYS_L THUMBS)
 
 MAKE_HRM(hmr_num_layer, &kp, &num_word, KEYS_L THUMBS)  // right-hand
 
+#define SMART_SHFT2 &smart_shft_urob
 // urbo smart shift
-MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word) 
+MAKE_MORPH_SHIFT(smart_shft_urob, &sk LSHFT, &caps_word) 
     &caps_word {  // mods deactivate caps-word, requires PR #1451
         // /delete-property/ ignore-modifiers;
         continue-list = <MINUS UNDER UNDERSCORE>;
     };
 
+
+MAKE_MORPH_CTL(smart_ctl_urob, &sk LCTRL, &num_word) 
+&num_word {  // num-word, requires PR #1451
+    layers = <NUM>;
+    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+};
 
 
 
@@ -153,8 +160,8 @@ ZMK_BEHAVIOR(shft_dance, tap_dance,
         /delete-property/ ignore-modifiers;
         continue-list = <MINUS UNDER UNDERSCORE>;
     };
-MAKE_MORPH_CTL(smart_shft_enter, SMART_SHFT, &kp ENTER)
-MAKE_MORPH_CTL(smart_shft_esc, SMART_SHFT, &kp ESC)
+MAKE_MORPH_CTL(smart_shft_enter, SMART_SHFT2, &kp ENTER)
+MAKE_MORPH_CTL(smart_shft_esc, SMART_SHFT2, &kp ESC)
 
 
 #define SMART_CTL &smart_ctl LCTRL 0
@@ -167,8 +174,13 @@ ZMK_BEHAVIOR(ctl_dance, tap_dance,
     layers = <NUM>;
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
-MAKE_MORPH_SHIFT(smart_ctl_esc, SMART_CTL, &kp ESC) 
-MAKE_MORPH_SHIFT(smart_ctl_enter, SMART_CTL, &kp ENTER)
+
+#define SMART_CTL2 &smart_ctl LCTRL LCTRL
+MAKE_HTAP_L(smart_ctl, &kp, &sk)
+
+
+MAKE_MORPH_SHIFT(smart_ctl_esc, SMART_CTL2, &kp ESC) 
+MAKE_MORPH_SHIFT(smart_ctl_enter, SMART_CTL2, &kp ENTER)
 
           
 
