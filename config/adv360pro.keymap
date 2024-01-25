@@ -66,7 +66,7 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp LCTRL &home_end       &pg_up_dn  SMART_NUM  
-                                        &hml LC(LGUI) BSPC &smart_shft_l &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
+                                        &hml LC(LGUI) BSPC SMART_SHFT &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
                                                                             &kp TAB       &kp ESC 
                 >;
         };
@@ -81,8 +81,8 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp TAB &home_end       &pg_up_dn  SMART_NUM  
-                                        &hml LC(LGUI) BSPC &smart_shft_l &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
-                                                                            &kp LCTRL       &kp ESC 
+                                        &hml LC(LGUI) BSPC SMART_SHFT &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
+                                                                            SMART_CTL       &kp ESC 
                 >;
         };
 
@@ -94,7 +94,7 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
                 &mo FN    &kp GRAVE &kp LCTRL  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                   &kp TAB &home_end       &pg_up_dn  SMART_NUM  
-                                        &hml LC(LGUI) BSPC &smart_ctl_l &kp DEL                     &mo GER  &smart_shft_l &hmr LC(LA(LGUI)) SPACE
+                                        &hml LC(LGUI) BSPC  SMART_CTL &kp DEL                     &mo GER  SMART_SHFT &hmr LC(LA(LGUI)) SPACE
                                                                             &kp ESC       &kp ENTER 
                 >;
         };

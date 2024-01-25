@@ -117,13 +117,8 @@ MAKE_MORPH_SHIFT(smart_shft_l, &sk LSHFT, &caps_word)
         continue-list = <MINUS UNDER UNDERSCORE>;
     };
 
-MAKE_MORPH_SHIFT(smart_shft_r, &sk RSHFT, &caps_word) 
-    &caps_word {  // mods deactivate caps-word, requires PR #1451
-        /delete-property/ ignore-modifiers;
-        continue-list = <MINUS UNDER>;
-    };
 
-MAKE_MORPH_CTL(smart_ctl_l, &sk LCTRL, &kp LCTRL)
+
 
 // urob smart num
 #define SMART_NUM &smart_num NUM 0
@@ -137,7 +132,30 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
-MAKE_MORPH_SHIFT(smart_ctrl, &sk LCTRL, &kp LCTRL) 
+#define SMART_SHFT &smart_shft LSHFT 0
+MAKE_HTAP(smart_shft, &kp, &shft_dance)
+ZMK_BEHAVIOR(shft_dance, tap_dance,
+             tapping-term-ms = <300>;
+             bindings = <&caps_word>, <&sk LSHFT>;  // reverse this for sticky-num on single tap
+             )
+&caps_word {  // mods deactivate caps-word, requires PR #1451
+        /delete-property/ ignore-modifiers;
+        continue-list = <MINUS UNDER UNDERSCORE>;
+    };
+MAKE_MORPH_CTL(smart_shft_esc, SMART_SHFT, &kp ESC)
+
+#define SMART_CTL &smart_ctl LCTRL 0
+MAKE_HTAP(smart_ctl, &kp, &ctl_dance)
+ZMK_BEHAVIOR(ctl_dance, tap_dance,
+             tapping-term-ms = <300>;
+             bindings = <&num_word>, <&sk LCTRL>;  // reverse this for sticky-num on single tap
+             )
+&num_word {  // num-word, requires PR #1451
+    layers = <NUM>;
+    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+};
+MAKE_MORPH_SHIFT(smart_ctl_enter, SMART_CTL, &kp ENTER) 
+
           
 
 MAKE_HTAP(lt_bs_del,&mo, &bs_del)
