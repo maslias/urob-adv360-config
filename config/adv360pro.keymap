@@ -64,7 +64,7 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &qmark_excl  &kp RSHFT
                 &mo FN    &kp GRAVE &copy_paste_dance  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                 &kp LCTRL &home_end       &pg_up_dn  &kp LCTRL  
-                                        &hml LC(LGUI) BSPC SMART_CTL2 &kp DEL                     &mo GER  &kp SMART_SHFT2 &hmr LC(LA(LGUI)) SPACE
+                                        &hml LC(LGUI) BSPC SMART_CTL2 &kp DEL                     &mo GER  SMART_SHFT2 &hmr LC(LA(LGUI)) SPACE
                                                                             &kp TAB       SMART_NUM 
                 >;
         };
