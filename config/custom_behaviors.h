@@ -108,18 +108,13 @@ MAKE_HRM_SHIFT(hmls, &kp, &kp, KEYS_R THUMBS) // left-hand homerow mod for shift
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
 MAKE_HRM_SHIFT(hmrs, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shift
 
-MAKE_HRM(hmr_qmark_excl, &kp, &qmark_excl, KEYS_L THUMBS)  // right-hand
 MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmr_layer, &mo, &kp, KEYS_L THUMBS)
 
 
-MAKE_HRM(hml_dqt_sqt, &kp, &dqt_sqt, KEYS_R THUMBS)
-MAKE_HRM(hml_pipe_tilt, &kp, &pipe_tilt, KEYS_R THUMBS)
+MAKE_HRM(hml_enter, &kp, &kp ENTER, KEYS_L THUMBS)
+MAKE_HRM(hml_esc, &kp, &kp ESC, KEYS_R THUMBS)
 
-MAKE_HRM(hml_lpar_rpar, &kp, &lpar_rpar, KEYS_L THUMBS)
-MAKE_HRM(hml_minus_under, &kp, &minus_under, KEYS_L THUMBS)
-
-MAKE_HRM(hmr_num_layer, &kp, &num_word, KEYS_L THUMBS)  // right-hand
 
 #define SMART_SHFT2 &smart_shft_urob
 // urbo smart shift
@@ -160,8 +155,6 @@ ZMK_BEHAVIOR(shft_dance, tap_dance,
         /delete-property/ ignore-modifiers;
         continue-list = <MINUS UNDER UNDERSCORE>;
     };
-MAKE_MORPH_CTL(smart_shft_enter, SMART_SHFT2, &kp ENTER)
-MAKE_MORPH_CTL(smart_shft_esc, SMART_SHFT2, &kp ESC)
 
 
 #define SMART_CTL &smart_ctl LCTRL 0
@@ -179,11 +172,6 @@ ZMK_BEHAVIOR(ctl_dance, tap_dance,
 MAKE_HTAP_L(smart_ctl, &kp, &sk)
 
 
-MAKE_MORPH_SHIFT(smart_ctl_esc, SMART_CTL2, &kp ESC) 
-MAKE_MORPH_SHIFT(smart_ctl_enter, SMART_CTL2, &kp ENTER)
-
-          
-
 ZMK_BEHAVIOR(copy_paste_dance, tap_dance,
              tapping-term-ms = <270>;
              bindings = <&kp LC(INS)>, <&kp LC(V)>;  // reverse this for sticky-num on single tap
@@ -193,38 +181,14 @@ ZMK_BEHAVIOR(copy_paste_dance, tap_dance,
 
 // combo stuff
 MAKE_MORPH_SHIFT(bs_del, &kp BSPC, &kp DEL) 
-MAKE_MORPH_SHIFT(space_tab, &kp SPACE, &kp TAB)
-MAKE_MORPH_SHIFT(enter_tab, &kp ENTER, &kp TAB)
-MAKE_MORPH_SHIFT(flsh_pipe, &kp FSLH, &kp PIPE)
-MAKE_MORPH_SHIFT(esc_cancel, &kp ESC, &kp K_CANCEL)
-MAKE_MORPH_SHIFT(at_hash, &kp AT, &kp HASH)
 MAKE_MORPH_SHIFT(comma_semi, &kp COMMA, &kp SEMI)
 MAKE_MORPH_SHIFT(dot_colon, &kp DOT, &kp COLON)
 MAKE_MORPH_SHIFT(qmark_excl, &kp QMARK, &kp EXCL)
-MAKE_MORPH_SHIFT(lt_gt, &kp LT, &kp GT)
-MAKE_MORPH_SHIFT(dqt_sqt, &kp DQT, &kp SQT)
-MAKE_MORPH_SHIFT(flsh_bslh, &kp FSLH, &kp BSLH)
-MAKE_MORPH_SHIFT(dllr_amps, &kp DLLR, &kp AMPS)
-MAKE_MORPH_SHIFT(pipe_tilt, &kp PIPE, &kp TILDE)
-MAKE_MORPH_SHIFT(grave_caret ,&kp GRAVE, &kp CARET)
-MAKE_MORPH_SHIFT(lbkt_rbkt , &kp LBKT, &kp RBKT)
-MAKE_MORPH_SHIFT(lpar_rpar, &kp LPAR, &kp RPAR)
-MAKE_MORPH_SHIFT(lbrc_rbrc, &kp LBRC, &kp RBRC)
-MAKE_MORPH_SHIFT(equal_prcnt ,&kp EQUAL, &kp PRCNT)
-MAKE_MORPH_SHIFT(minus_under, &kp MINUS, &kp UNDER)
-MAKE_MORPH_SHIFT(plus_astrk, &kp PLUS, &kp ASTRK)
-MAKE_MORPH_SHIFT(semi_colon, &kp SEMI, &kp COLON)
 
 
 // thumbs stuff
 MAKE_MORPH_SHIFT(home_end, &kp HOME, &kp END)
 MAKE_MORPH_SHIFT(pg_up_dn, &kp PG_UP, &kp PG_DN)
-MAKE_MORPH_SHIFT(enter_esc, &kp ENTER, &kp ESC)
-MAKE_MORPH_SHIFT(space_enter, &kp SPACE, &kp ENTER)
-
-MAKE_MORPH_SHIFT(space_bspc, &kp SPACE, &kp BSPC)
-
-MAKE_MORPH_SHIFT(bspc_esc, &kp BSPC, &kp ESC)
 
                  
 // german stuff

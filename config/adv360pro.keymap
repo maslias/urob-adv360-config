@@ -27,13 +27,11 @@
 #define ___ &trans
 
 #define DEF 0
-#define THMB 1
-#define THMB_2 2
-#define NUM 3
-#define FN 4
-#define NAVI 5
-#define GER 6
-#define MOD 7
+#define NUM 1
+#define FN 2
+#define NAVI 3
+#define GER 4
+#define MOD 5
 
 #include "combos.dtsi"
 #include "custom_behaviors.h"
@@ -62,44 +60,15 @@ behaviors {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
                 &kp CAPS   &a_de_ae 0 Q     &s_de_esz 0 W     &e_de_eur 0 E     &kp R     &kp T     &to DEF         &to THMB   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &none    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
-                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
+                &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &none    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &kp MINUS  &kp SQT
+                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &qmark_excl  &kp RSHFT
                 &mo FN    &kp GRAVE &copy_paste_dance  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp LCTRL &home_end       &pg_up_dn  SMART_NUM  
-                                        &hml LC(LGUI) BSPC SMART_SHFT2 &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
-                                                                            &kp TAB       &kp ESC 
+                                                                &kp LCTRL &home_end       &pg_up_dn  &kp LCTRL  
+                                        &hml LC(LGUI) BSPC SMART_CTL2 &kp DEL                     &mo GER  &kp SMART_SHFT2 &hmr LC(LA(LGUI)) SPACE
+                                                                            &kp TAB       SMART_NUM 
                 >;
         };
 
-
-
-        main_2_layer {
-            bindings = <
-                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &a_de_ae 0 Q     &s_de_esz 0 W     &e_de_eur 0 E     &kp R     &kp T     &to DEF         &to THMB   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &none    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
-                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
-                &mo FN    &kp GRAVE &copy_paste_dance  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp TAB &home_end       &pg_up_dn  SMART_NUM  
-                                        &hml LC(LGUI) BSPC SMART_SHFT2 &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
-                                                                            SMART_CTL2       &kp ESC 
-                >;
-        };
-
-        
-
-        main_3_layer {
-            bindings = <
-                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp CAPS   &a_de_ae 0 Q     &s_de_esz 0 W     &e_de_eur 0 E     &kp R     &kp T     &to DEF         &to THMB   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp BSLH
-                &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &none    &to THMB_2     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &qmark_excl  &kp SQT
-                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &at_hash  &kp RSHFT
-                &mo FN    &kp GRAVE &copy_paste_dance  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                  &kp TAB &home_end       &pg_up_dn  SMART_NUM  
-                                        &hml LC(LGUI) BSPC  &smart_ctl_esc &kp DEL                     &mo GER  &smart_shft_enter &hmr LC(LA(LGUI)) SPACE
-                                                                            &kp ESC       &kp ENTER 
-                >;
-        };
 
         keypad {
             bindings = <
