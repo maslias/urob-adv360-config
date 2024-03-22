@@ -10,6 +10,8 @@
 
 #define HRC_caret &hml LA(LGUI) CARET
 #define HRC_dllr &hmr LA(LGUI) DLLR
+#define HRC_caret_alt &hml LCTRL CARET
+#define HRC_dllr_alt &hmr LCTRL DLLR
 
 #define HRC_sqt &hml LA(LCTRL) SQT
 #define HRC_plus &hmr LA(LCTRL) PLUS
@@ -18,6 +20,8 @@
 #define HRC_tilde &hmr LA(LCTRL) TILDE
 
 
+#define HRC_amps &hml LA(LCTRL) AMPS
+#define HRC_prcnt &hmr LA(LCTRL) PRCNT
 
 ZMK_COMBO(combo_enter, HRC_enter, RM1 RM2, DEF NUM FN NAVI GER MOD, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_esc, HRC_esc, LM1 LM2, DEF NUM FN NAVI GER MOD, COMBO_TERM_SLOW)
@@ -30,6 +34,7 @@ ZMK_COMBO(combo_lbkt, &kp LBKT, LB2 LB3, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_lt, &kp LT, LT1 LT2, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_fslh, &kp FSLH, LB1 LB2, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_caret, HRC_caret, LM3 LM4, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_caret, HRC_caret_alt, LB1 LM2, DEF NUM, COMBO_TERM_SLOW)
 
 ZMK_COMBO(combo_rbrc, &kp RBRC, RT2 RT3, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_rpar, HRC_rpar, RM2 RM3, DEF NUM, COMBO_TERM_SLOW)
@@ -37,6 +42,7 @@ ZMK_COMBO(combo_rbkt, &kp RBKT, RB2 RB3, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_gt, &kp GT, RT1 RT2, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_bslh, &kp BSLH, RB1 RB2, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_dllr, HRC_dllr, RM3 RM4, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_dllr, HRC_dllr_alt, RB1 RM2, DEF NUM, COMBO_TERM_SLOW)
 
 
 
@@ -51,10 +57,10 @@ ZMK_COMBO(combo_astrk, &kp ASTRK, RB1 RB3, DEF NUM, COMBO_TERM_SLOW)
 
 
 ZMK_COMBO(combo_at, &kp AT, LT0 LT1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_pipe, HRC_pipe, LM0 LM1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_amps, &kp AMPS, LB0 LB1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_amps, HRC_amps, LM0 LM1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_pipe, &kp PIPE, LB0 LB1, DEF NUM, COMBO_TERM_SLOW)
 
 ZMK_COMBO(combo_hash, &kp HASH, RT0 RT1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_tilde, HRC_tilde, RM0 RM1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_prcnt, &kp PRCNT, RB0 RB1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_prcnt, HRC_prcnt, RM0 RM1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_tilde, &kp TILDE, RB0 RB1, DEF NUM, COMBO_TERM_SLOW)
 
