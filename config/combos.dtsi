@@ -2,65 +2,71 @@
 #define COMBO_TERM_SLOW 40
 
 
-#define HRC_esc &hml LA(LCTRL) ESC
-#define HRC_enter &hmr LA(LCTRL) ENTER
+#define HRC_tab &hml LG(LCTRL) TAB
+#define HRC_num &hmr LG(LCTRL) SMART_SHFT2
 
-#define HRC_lpar &hml LA(LGUI) LPAR
-#define HRC_rpar &hmr LA(LGUI) RPAR
+#define HRC_lpar &hml LA(LCTRL) LPAR
+#define HRC_rpar &hmr LA(LCTRL) RPAR
+#define HRC_lt &hml LALT LT
+#define HRC_gt &hmr LALT GT
+#define HRC_fslh &hml LALT FSLH
+#define HRC_bslh &hmr LALT BSLH
 
-#define HRC_caret &hml LA(LGUI) CARET
-#define HRC_dllr &hmr LA(LGUI) DLLR
+#define HRC_dqt &hml LG(LALT) DQT
+#define HRC_plus &hmr LG(LALT) PLUS
+
+#define HRC_dllr &hml LCTRL DLLR
+#define HRC_prcnt &hmr LCTRL PRCNT
+#define HRC_caret &hml LCTRL CARET
+#define HRC_amps &hmr LCTRL AMPS
+
+#define HRC_at &hml LALT AT
+#define HRC_hash &hmr LALT HASH
+
+
 #define HRC_caret_alt &hml LCTRL CARET
 #define HRC_dllr_alt &hmr LCTRL DLLR
 
-#define HRC_sqt &hml LA(LCTRL) SQT
-#define HRC_plus &hmr LA(LCTRL) PLUS
 
-#define HRC_pipe &hml LA(LCTRL) PIPE
-#define HRC_tilde &hmr LA(LCTRL) TILDE
-
-
-#define HRC_amps &hml LA(LCTRL) AMPS
-#define HRC_prcnt &hmr LA(LCTRL) PRCNT
-
-ZMK_COMBO(combo_enter, HRC_enter, RM1 RM2, DEF NUM FN NAVI GER MOD, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_esc, HRC_esc, LM1 LM2, DEF NUM FN NAVI GER MOD, COMBO_TERM_SLOW)
+#define HRC_pipe &hml LALT PIPE
+#define HRC_tilde &hmr LALT TILDE
 
 
 
-ZMK_COMBO(combo_lbrc, &kp LBRC, LT2 LT3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_lpar, HRC_lpar, LM2 LM3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_lbkt, &kp LBKT, LB2 LB3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_lt, &kp LT, LT1 LT2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_fslh, &kp FSLH, LB1 LB2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_caret, HRC_caret, LM3 LM4, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_caret, HRC_caret_alt, LB1 LM2, DEF NUM, COMBO_TERM_SLOW)
-
-ZMK_COMBO(combo_rbrc, &kp RBRC, RT2 RT3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_rpar, HRC_rpar, RM2 RM3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_rbkt, &kp RBKT, RB2 RB3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_gt, &kp GT, RT1 RT2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_bslh, &kp BSLH, RB1 RB2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_dllr, HRC_dllr, RM3 RM4, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_dllr, HRC_dllr_alt, RB1 RM2, DEF NUM, COMBO_TERM_SLOW)
 
 
-
-ZMK_COMBO(combo_dqt, &kp DQT, LT1 LT3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_sqt, HRC_sqt, LM1 LM3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_grave, &kp GRAVE, LB1 LB3, DEF NUM, COMBO_TERM_SLOW)
-
-ZMK_COMBO(combo_equal, &kp EQUAL, RT1 RT3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_plus, HRC_plus, RM1 RM3, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_astrk, &kp ASTRK, RB1 RB3, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_tab, HRC_tab, LM1 LM3, DEF NUM FN NAVI GER,  COMBO_TERM_SLOW)
+ZMK_COMBO(combo_num, HRC_num, RM1 RM3, DEF NUM FN NAVI GER,  COMBO_TERM_SLOW)
 
 
+ZMK_COMBO(combo_lbrc, &kp LBRC, LT1 LT2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_lpar, HRC_lpar, LM1 LM2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_lbkt, &kp LBKT, LB1 LB2, DEF NUM, COMBO_TERM_SLOW)
 
-ZMK_COMBO(combo_at, &kp AT, LT0 LT1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_amps, HRC_amps, LM0 LM1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_pipe, &kp PIPE, LB0 LB1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_rbrc, &kp RBRC, RT1 RT2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_rpar, HRC_rpar, RM1 RM2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_rbkt, &kp RBKT, RB1 RB2, DEF NUM, COMBO_TERM_SLOW)
 
-ZMK_COMBO(combo_hash, &kp HASH, RT0 RT1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_prcnt, HRC_prcnt, RM0 RM1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(combo_tilde, &kp TILDE, RB0 RB1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_lt, HRC_lt, LT1 LM2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_fslh, HRC_fslh, LM2 LB1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_gt, HRC_gt, RT1 RM2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_bslh, HRC_bslh, RM2 RB1, DEF NUM, COMBO_TERM_SLOW)
 
+ZMK_COMBO(combo_sqt, &kp SQT, LT2 LT3, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_dqt, HRC_dqt, LM2 LM3, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_grave, &kp GRAVE, LB2 LB3, DEF NUM, COMBO_TERM_SLOW)
+
+ZMK_COMBO(combo_equal, &kp EQUAL, RT2 RT3, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_plus, HRC_plus, RM2 RM3, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_astrk, &kp ASTRK, RB2 RB3, DEF NUM, COMBO_TERM_SLOW)
+
+ZMK_COMBO(combo_dllr, HRC_dllr, LT2 LM1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_prcnt, HRC_prcnt, RT2 RM1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_caret, HRC_caret, LM1 LB2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_amps, HRC_amps, RM1 RB2, DEF NUM, COMBO_TERM_SLOW)
+
+ZMK_COMBO(combo_at, HRC_at, LT3 LM2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_hash, HRC_hash, RT3 RM2, DEF NUM, COMBO_TERM_SLOW)
+
+ZMK_COMBO(combo_pipe, HRC_pipe, LB3 LM2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(combo_tilde, HRC_tilde, RB3 RM2, DEF NUM, COMBO_TERM_SLOW)

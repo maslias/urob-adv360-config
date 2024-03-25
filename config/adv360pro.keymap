@@ -27,11 +27,12 @@
 #define ___ &trans
 
 #define DEF 0
-#define NUM 1
-#define FN 2
-#define NAVI 3
-#define GER 4
-#define MOD 5
+#define GAME 1
+#define NUM 2
+#define FN 3
+#define NAVI 4
+#define GER 5
+#define MOD 6
 
 #include "combos.dtsi"
 #include "custom_behaviors.h"
@@ -56,19 +57,32 @@ behaviors {
     keymap {
         compatible = "zmk,keymap";
 
+
         main_layer {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
                 &kp TAB   &a_de_ae 0 Q     &s_de_esz 0 W     &e_de_eur 0 E     &kp R     &kp T     &to DEF         &none   &kp Z     &u_de_ue 0 U     &kp I     &o_de_oe 0 O     &kp P     &kp TAB
-                &kp ESC   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &none    &none     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &kp MINUS  &kp ENTER
+                &kp ESC   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &to GAME    &none     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &kp MINUS  &kp ENTER
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &qmark_excl  &kp RSHFT
                 &mo FN    &kp GRAVE &copy_paste_dance  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                &kp LCTRL &home_end       &pg_up_dn  &kp LCTRL  
-                                        &hml LC(LGUI) BSPC SMART_CTL2 &kp DEL                     &mo GER  SMART_SHFT2 &hmr LC(LA(LGUI)) SPACE
-                                                                            &kp TAB       SMART_NUM 
+                                                                &kp SMART_CTL2 &home_end       &pg_up_dn  &kp SMART_CTL2  
+                                        &hml LC(LGUI) BSPC &kp ESC &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
+                                                                            SMART_SHFT2       SMART_SHFT2 
                 >;
         };
 
+        game_layer {
+            bindings = <
+                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &to DEF         &none   &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
+                &kp ESC   &kp A    &kp S     &kp D     &kp F     &kp G     &none    &to GAME     &kp H     &kp J     &kp K     &kp L     &kp MINUS  &kp ENTER
+                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &qmark_excl  &kp RSHFT
+                &mo FN    &kp GRAVE &copy_paste_dance  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
+                                                                &kp SMART_CTL2 &home_end       &pg_up_dn  &kp SMART_CTL2  
+                                        &hml LC(LGUI) BSPC &kp ESC &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
+                                                                            SMART_SHFT2       SMART_SHFT2 
+                >;
+        };
 
         keypad {
             bindings = <
