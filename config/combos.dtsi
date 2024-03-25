@@ -1,7 +1,6 @@
 #define COMBO_TERM_FAST 35
 #define COMBO_TERM_SLOW 40
 
-
 #define HRC_tab &hml LG(LCTRL) TAB
 #define HRC_num &hmr_num LG(LCTRL) 0
 
@@ -26,13 +25,8 @@
 #define HRC_pipe &hml LALT PIPE
 #define HRC_tilde &hmr LALT TILDE
 
-
-
-
-
 ZMK_COMBO(combo_tab, HRC_tab, LM1 LM3, DEF NUM FN NAVI GER,  COMBO_TERM_SLOW)
 ZMK_COMBO(combo_num, HRC_num, RM1 RM3, DEF NUM FN NAVI GER,  COMBO_TERM_SLOW)
-
 
 ZMK_COMBO(combo_lbrc, &kp LBRC, LT1 LT2, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(combo_lpar, HRC_lpar, LM1 LM2, DEF NUM, COMBO_TERM_SLOW)
