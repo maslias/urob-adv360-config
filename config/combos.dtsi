@@ -23,11 +23,6 @@
 #define HRC_at &hml LALT AT
 #define HRC_hash &hmr LALT HASH
 
-
-#define HRC_caret_alt &hml LCTRL CARET
-#define HRC_dllr_alt &hmr LCTRL DLLR
-
-
 #define HRC_pipe &hml LALT PIPE
 #define HRC_tilde &hmr LALT TILDE
 
