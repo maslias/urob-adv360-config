@@ -19,9 +19,6 @@
 #define HRC_caret &hml LCTRL CARET
 #define HRC_amps &hmr LCTRL AMPS
 
-#define HRC_at &hml LALT AT
-#define HRC_hash &hmr LALT HASH
-
 #define HRC_pipe &hml LALT PIPE
 #define HRC_tilde &hmr LALT TILDE
 
