@@ -3,7 +3,7 @@
 
 
 #define HRC_tab &hml LG(LCTRL) TAB
-#define HRC_num &hmr_num LG(LCTRL) 0
+#define HRC_num &hmr LG(LCTRL) TAB
 
 #define HRC_lpar &hml LA(LCTRL) LPAR
 #define HRC_rpar &hmr LA(LCTRL) RPAR

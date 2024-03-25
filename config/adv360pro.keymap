@@ -75,7 +75,7 @@ behaviors {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
                 &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &to DEF         &none   &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
-                &kp ESC   &kp A    &kp S     &kp D     &kp F     &kp G     &none    &to GAME     &kp H     &kp J     &kp K     &kp L     &kp MINUS  &kp ENTER
+                &kp ESC   &kp A    &kp S     &kp D     &kp F     &kp G     &to GAME    &none     &kp H     &kp J     &kp K     &kp L     &kp MINUS  &kp ENTER
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &qmark_excl  &kp RSHFT
                 &mo FN    &kp GRAVE &copy_paste_dance  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                 &kp SMART_CTL2 &home_end       &pg_up_dn  &kp SMART_CTL2  
