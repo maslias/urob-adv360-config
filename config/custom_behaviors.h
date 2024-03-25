@@ -112,6 +112,7 @@ MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmr_layer, &mo, &kp, KEYS_L THUMBS)
 
 
+MAKE_HRM(hmr_num, &kp, &num_word, KEYS_L THUMBS)  // right-hand
 
 
 #define SMART_SHFT2 &smart_shft_urob
