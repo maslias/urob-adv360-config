@@ -79,7 +79,7 @@ behaviors {
                 &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &qmark_excl  &kp RSHFT
                 &mo FN    &kp GRAVE &copy_paste_dance  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
                                                                 SMART_CTL2 &home_end       &pg_up_dn  SMART_CTL2  
-                                        &hml LC(LGUI) BSPC &kp ESC &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
+                                        &hml LC(LGUI) BSPC &kp SPACE &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
                                                                             SMART_SHFT2       SMART_SHFT2 
                 >;
         };
