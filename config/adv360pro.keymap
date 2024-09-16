@@ -75,13 +75,13 @@ behaviors {
         alt_layer {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog NUM    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &to DEF         &to ALT   &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
-                &mo GER   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &to GAME    &none     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &kp MINUS  &mo GER
-                &kp LSHFT &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &mo GER  &kp RSHFT
+                &mo GER   &kp Q     &kp W     &kp E     &kp R     &kp T     &to DEF         &to ALT   &kp Z     &kp U     &kp I     &kp O     &kp P     &mo GER
+                &kp TAB   &hml_layer NAVI A    &hml LGUI S     &hml LALT D     &hml LCTRL F     &kp G     &to GAME    &none     &hmr_layer NAVI H     &hmr RCTRL J     &hmr LALT K     &hmr LGUI L     &kp MINUS  &num_word
+                &kp TAB &kp Y     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &comma_semi &dot_colon   &mo GER  &num_word
                 &mo FN    &kp GRAVE &copy_paste_dance  &kp LBKT  &kp RBKT                                              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &mo FN
-                                                                SMART_CTL2 &home_end       &pg_up_dn   SMART_SHFT2 
-                                        &hml LC(LGUI) BSPC &hml LSHFT ESC &kp DEL                     &mo GER  &hml RSHFT ENTER &hmr LC(LA(LGUI)) SPACE
-                                                                            &kp TAB       &num_word 
+                                                                SMART_CTL2 &home_end       &pg_up_dn   SMART_CTL2 
+                                        &hml LC(LGUI) BSPC &kp ESC &kp DEL                     &mo GER  &kp ENTER &hmr LC(LA(LGUI)) SPACE
+                                                                            SMART_SHFT2       SMART_SHFT2 
                 >;
         };
 
@@ -140,7 +140,7 @@ behaviors {
         german_layer {
             bindings = <
                 ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       ___       &euro_sign       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
+                ___       ___       ___       &euro_sign       ___       ___       ___            ___       ___       de_ue       ___       &de_oe       ___       ___
                 ___       &de_ae       &de_eszett       &de_ue     &de_oe       ___       ___            ___       ___       ___       ___       ___       ___       ___
                 ___       ___       ___       ___       ___       ___                                ___       ___       ___       ___       ___       ___
                 ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
